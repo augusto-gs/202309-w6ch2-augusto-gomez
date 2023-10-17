@@ -1,3 +1,5 @@
+import { type GotCharacterData, type CharactersData } from "../types/types";
+
 abstract class Component {
   element: Element;
   parentElement: Element;
@@ -8,12 +10,10 @@ abstract class Component {
   }
 
   render(): void {
-    this.element.appendChild(this.parentElement);
-
-    this.populate();
+    this.parentElement.appendChild(this.element);
   }
 
-  abstract populate(): void;
+  abstract populate(character: GotCharacterData, state: CharactersData): void;
 }
 
 export default Component;

@@ -38,9 +38,9 @@ const bronnCharacterData = {
   imageSource: "bronn.jpg",
 };
 
-const joffrey = new King(joffreyCharacterData, 2);
-const jaime = new Fighter(jaimeCharacterData, "sword", 7);
-const daenerys = new Fighter(daenerysCharacterData, "Dragons", 10);
+export const joffrey = new King(joffreyCharacterData, 2);
+export const jaime = new Fighter(jaimeCharacterData, "sword", 7);
+export const daenerys = new Fighter(daenerysCharacterData, "Dragons", 10);
 const tyrion = new Advisor(tyrionCharacterData, daenerys);
 const bronn = new Squire(bronnCharacterData, 0, jaime);
 
