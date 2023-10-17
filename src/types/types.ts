@@ -1,8 +1,12 @@
-interface GotCharacterData {
+export interface GotCharacterData {
   name: string;
   family: string;
   age: number;
   imageSource: string;
 }
 
-export default GotCharacterData;
+export interface FighterData {
+  weapon: string;
+  dexterity: number;
+  characterData: GotCharacterData;
+}
