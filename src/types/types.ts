@@ -10,3 +10,8 @@ export interface FighterData {
   dexterity: number;
   characterData: GotCharacterData;
 }
+export interface CharactersData {
+  characterData: GotCharacterData;
+  isAlive: boolean;
+  series: string;
+}

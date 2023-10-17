@@ -2,6 +2,7 @@ import { Character } from "./Characters/Characters.js";
 import { King } from "./King/King.js";
 import { Fighter } from "./Fighter/Fighter.js";
 import { Squire } from "./Squire/Squire.js";
+import { Advisor } from "./Advisor/Advisor.js";
 
 const joffreyCharacterData = {
   name: "Joffrey",
@@ -23,3 +24,4 @@ console.log(new Character(joffreyCharacterData));
 console.log(new King(joffreyCharacterData, 4));
 console.log(new Fighter(joffreyCharacterData, "blade", 2));
 console.log(new Squire(joffreyCharacterData, 9, jaime));
+console.log(new Advisor(joffreyCharacterData, jaime));
