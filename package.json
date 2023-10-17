@@ -1,10 +1,15 @@
 {
   "name": "202309-w6ch2-augusto-gomez",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "public/js/index.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "start": "node .",
+    "start:dev": "node --watch .",
+    "build": "npx tsc",
+    "build:dev": "tsc -w"
   },
   "keywords": [],
   "author": "",
