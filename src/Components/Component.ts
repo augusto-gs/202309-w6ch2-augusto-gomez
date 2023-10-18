@@ -13,7 +13,7 @@ abstract class Component {
     this.parentElement.appendChild(this.element);
   }
 
-  abstract populate(character: GotCharacterData, state: CharactersData): void;
+  abstract populate(): void;
 }
 
 export default Component;

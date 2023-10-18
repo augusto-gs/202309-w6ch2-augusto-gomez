@@ -5,6 +5,7 @@ import { Squire } from "./Squire/Squire.js";
 import { Advisor } from "./Advisor/Advisor.js";
 import Cards from "./Cards/Cards.js";
 import { joffrey, jaime, daenerys } from "./characters.js";
+import App from "./App/App.js";
 
 const joffreyCharacterData = {
   name: "Joffrey",
@@ -27,23 +28,28 @@ const daenerysCharacterData = {
   imageSource: "daenerys.jpg",
 };
 
-console.log(new Character(joffreyCharacterData));
-console.log(new King(joffreyCharacterData, 4));
-console.log(new Fighter(joffreyCharacterData, "blade", 2));
-console.log(new Squire(joffreyCharacterData, 9, jaime));
-console.log(new Advisor(joffreyCharacterData, jaime));
-
 const body = document.querySelector("body")!;
-const joffreyCard = new Cards("li", body);
-joffreyCard.populate(joffreyCharacterData, joffrey);
+
+const container = new App("div", body, "ul");
+container.render();
+container.populate();
+
+const joffreyCard = new Cards(
+  container.childElement,
+  joffreyCharacterData,
+  joffrey,
+);
+joffreyCard.populate();
 joffreyCard.render();
 
-const jaimeCard = new Cards("li", body);
-jaimeCard.populate(jaimeCharacterData, jaime);
+const jaimeCard = new Cards(container.childElement, jaimeCharacterData, jaime);
+jaimeCard.populate();
 jaimeCard.render();
 
-const daenerysCard = new Cards("li", body);
-daenerysCard.populate(daenerysCharacterData, daenerys);
+const daenerysCard = new Cards(
+  container.childElement,
+  daenerysCharacterData,
+  daenerys,
+);
+daenerysCard.populate();
 daenerysCard.render();
-
-console.log(joffreyCard);
